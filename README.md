@@ -13,5 +13,5 @@ Here is a list:
 ## The other folders
 I keep files not directly related to the classes in this folder. Here is a list:
 
-- [R files]() These are the files I am creating as I learn R.
+- [R files](./R) These are the files I am creating as I learn R.
 - [Python]() Python files.
