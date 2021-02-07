@@ -1,48 +1,35 @@
-library(PerformanceAnalytics)
-library(boot)
+install.packages("dyplr")
+library(dplyr)
 
-# Basic data indicators
-exploratory <- function(x) {
-  print("-----------------------")
-  print("mean")
-  print(mean(x))
-  print("-----------------------")
-  print("trimmed mean 15%")
-  print(mean(x,0.15))
-  print("-----------------------")
-  print("median")
-  print(median(x))
-  print("-----------------------")
-  print("quantile")
-  print(quantile(x))
-  print("-----------------------")
-  print("variability")
-  print(var(x))
-  print("-----------------------")
-  print("standard deviation")
-  print(sd(x))
-  print("-----------------------")
-  print("skewnes")
-  print(skewness(x))
-}
+summary(Book2)
+attach(Book2)
 
-#
-metric <- Book2$barrels08
-metric_label <- "barrels08"
-#
-metrics <-c(Book2$barrels08, Book2$co2TailpipeGpm)
-for (m in seq_along(metrics)) {
-  print(m)
-}
+boxplot(comb08)
+boxplot(barrels08)
+boxplot(co2TailpipeGpm)
+boxplot(cylinders)
+boxplot(emissionscat)
+
+plot(barrels08 ~ comb08)
+plot(barrels08 ~ co2TailpipeGpm)
+plot(comb08 ~ co2TailpipeGpm)
+plot(cylinders ~ co2TailpipeGpm)
+
+Book2 %>%
+  select(comb08, barrels08, co2TailpipeGpm, cylinders) %>%
+  summary()
+
+Book2 %>%
+  select(comb08, barrels08, co2TailpipeGpm, cylinders) %>%
+  boxplot()
 
 
-exploratory(metric)
+Book2 %>%
+  select(comb08, barrels08, co2TailpipeGpm, cylinders) %>%
+  filter(cylinders > 0) %>%
+  summary()
 
-# Plots
-
-hist(metric)
-
-counts <-table(metric)
-barplot(counts)
-
-boxplot(metric)
+Book2 %>%
+  select(comb08, barrels08, co2TailpipeGpm, cylinders) %>%
+  filter(cylinders > 0) %>%
+  boxplot()
