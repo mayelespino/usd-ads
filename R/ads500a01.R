@@ -26,10 +26,10 @@ Book2 %>%
 
 Book2 %>%
   select(comb08, barrels08, co2TailpipeGpm, cylinders) %>%
-  filter(cylinders > 0) %>%
+  filter(cylinders != "") %>%
   summary()
 
 Book2 %>%
   select(comb08, barrels08, co2TailpipeGpm, cylinders) %>%
-  filter(cylinders > 0) %>%
+  filter(cylinders != "") %>%
   boxplot()

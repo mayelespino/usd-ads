@@ -8,7 +8,7 @@ This is the workfile tab, from the data provided in class, exported in to csv. T
 This is my experimental R script, once I have something I want to save I copy it to another file name, for example: ads500a01.R.
 
 ## ads500a01.R
-In this file I do some very basic exploratory analysis and boxplots. In the first instance I take all the data. In the second instance I filter IN the data that where cylinders > 0, this is to filter out pure electric vehicles and keep hybrids.
+In this file I do some very basic exploratory analysis and boxplots. In the first instance I take all the data. In the second instance I filter IN the data that where cylinders are not empty, this is to filter out pure electric vehicles and keep hybrids. 
 
 --- 
 # R tutorials
