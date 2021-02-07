@@ -11,7 +11,7 @@ This is my experimental R script, once I have something I want to save I copy it
 In this file I do some very basic exploratory analysis and boxplots. In the first instance I take all the data. In the second instance I filter IN the data that where cylinders are not empty, this is to filter out pure electric vehicles and keep hybrids. 
 
 ### Including cylinders == ""
-![empty cylinders](images/RStudio01.pngi = 300x400)
+![empty cylinders](images/RStudio01.pngi =300x400)
 
 ### Excluding cylinders == ""
 ![non empty cylinders](images/RStudio02.png)
