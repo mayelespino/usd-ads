@@ -13,6 +13,7 @@ I am keeping files related to the classes on folders. Each folder has the name o
 Here is a list:
 
 - [ADSCS500A - Statistics](https://github.com/mayelespino/usd-ads/tree/main/ads500a)
+- [ADSCS500B - Data Science programming](https://github.com/mayelespino/usd-ads/tree/main/ads500b) 
 
 ## The other folders
 I keep files not directly related to the classes in this folder. Here is a list:
